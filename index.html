@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato para e-mail usando JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function () {
+          emailjs.init("43wWcP8rYhOzuqaFR");
+       })();
+    </script>
+ </head>
+
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>ENTRE EM CONTATO</h3>
+            <input type="text" id="name" placeholder="Seu Nome Completo" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Numero de telefone" required>
+            <textarea id="message" rows="4" placeholder="Qual seria o seu problema?"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
